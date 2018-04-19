@@ -12,6 +12,23 @@ def find_sum(num):
 
 	return total
 
-print(find_sum(1000))
-
 # 2. Even Fibonacci Numbers
+
+def fibo_even(num):
+
+	total_even = 0
+
+	first = 0
+	second = 1
+	total = 0
+
+	while total < num:
+
+		if total % 2 == 0:
+			total_even += total
+			print(total_even)
+
+		total = first + second
+		first = second
+		second = total
+	
