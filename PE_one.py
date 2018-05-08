@@ -60,5 +60,31 @@ def largest_palindrome():
 	'''
 	This function returns the largest possible palindrome number from two, three digit products
 	'''
+	largest = 0
 
-	return
+	for n in range(100,1000):
+		current = n
+		for num in range(100,1000):
+			if num < n:
+				continue
+
+			product = n * num
+
+			if is_palindrome(product):
+				if product > largest:
+					largest = product
+
+
+	return largest
+
+## Helper method for largest palindrome
+
+def is_palindrome(num):
+
+	num = str(num)
+
+	for i in range(0, len(num)/2):
+		if num[i] != num[len(num)-i-1]
+		return False
+
+	return True
