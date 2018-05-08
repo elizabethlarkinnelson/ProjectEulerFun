@@ -54,6 +54,19 @@ def largest_prime(n):
 	return
 
 
+## Helper method for largest palindrome
+
+def is_palindrome(num):
+
+	number = str(num)
+
+	for i in range(0, int(len(number)/2)):
+		if number[i] != number[len(number)-i-1]:
+			return False
+
+	return True
+
+
 #4. Largest Palindrome Product
 
 def largest_palindrome():
@@ -76,15 +89,3 @@ def largest_palindrome():
 
 
 	return largest
-
-## Helper method for largest palindrome
-
-def is_palindrome(num):
-
-	num = str(num)
-
-	for i in range(0, len(num)/2):
-		if num[i] != num[len(num)-i-1]
-		return False
-
-	return True
